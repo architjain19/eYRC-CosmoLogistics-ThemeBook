@@ -1,0 +1,986 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js navy">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Rule Book - eYRC 2023-24: Cosmo Logistic</title>
+
+
+        <!-- Custom HTML head -->
+        
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <!-- 
+        <link rel="icon" href="../favicon.svg">
+         -->
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        <link rel="stylesheet" href="../style.css">
+
+        <!-- MathJax -->
+        <script async type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "../";
+            var default_theme = "navy";
+            <!-- window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "navy"; -->
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('navy')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item affix "><a href="../welcome.html">Welcome to Cosmo Logistic theme!</a></li><li class="spacer"></li><li class="chapter-item "><a href="../deadlines.html">Deadlines</a></li><li class="spacer"></li><li class="chapter-item "><a href="../Stage_1.html">Stage 1</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../coding_contest.html">Codechef Contest</a></li><li class="chapter-item "><a href="../github_challenge.html">Github Challenge</a></li><li class="chapter-item "><a href="../Task_0/task_0.html">Task 0</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../Task_0/installation/installation_guide.html">(1) Software Install</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../Task_0/installation/humble_installation.html">- ROS 2 Humble Installation</a></li></ol></li><li class="chapter-item "><a href="../Task_0/learning_resources/learning_resources.html">(2) Learning Resources</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../Task_0/learning_resources/linux/linux_resources.html">I. Linux Resources</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../Task_0/learning_resources/linux/linux_file_system_directories.html">Linux File System Directories</a></li><li class="chapter-item "><a href="../Task_0/learning_resources/linux/linux_file_permissions.html">Linux File Permissions</a></li><li class="chapter-item "><a href="../Task_0/learning_resources/linux/linux_file_commands.html">Linux File Commands</a></li><li class="chapter-item "><a href="../Task_0/learning_resources/linux/shell_scripting.html">Shell Scripting</a></li></ol></li><li class="chapter-item "><a href="../Task_0/learning_resources/ros_basics/ros_workspace.html">II. ROS 2 Workspace</a></li><li class="chapter-item "><a href="../Task_0/learning_resources/ros_basics/ros_package.html">III. ROS 2 Package</a></li><li class="chapter-item "><a href="../Task_0/learning_resources/ros_basics/ros_nodes.html">IV. ROS 2 Nodes</a></li><li class="chapter-item "><a href="../Task_0/learning_resources/ros_basics/ros_launch.html">V. ROS 2 Launch</a></li><li class="chapter-item "><a href="../Task_0/learning_resources/ros_basics/ros_topic.html">VI. ROS 2 Topic</a></li><li class="chapter-item "><a href="../Task_0/learning_resources/ros_basics/ros_service.html">VII. ROS 2 Service</a></li><li class="chapter-item "><a href="../Task_0/learning_resources/ros_basics/ros_action.html">VIII. ROS 2 Action</a></li><li class="chapter-item "><a href="../Task_0/learning_resources/robotics_simulation_overview.html">IX. Robotics Simulation Overview</a></li><li class="chapter-item "><a href="../Task_0/learning_resources/python_quick_tutorials.html">X. Python Quick Tutorials</a></li></ol></li><li class="chapter-item "><a href="../Task_0/warehouse_setup_task/warehouse_setup_task.html">(3) Warehouse Setup</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../Task_0/warehouse_setup_task/task_instruction.html">- Task 0 - Instructions</a></li><li class="chapter-item "><a href="../Task_0/warehouse_setup_task/task_submission.html">- Task 0 - Submission</a></li></ol></li></ol></li><li class="chapter-item "><a href="../Task_1/task_1.html">Task 1</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../Task_1/learning_resources/learning_resources.html">(1) Learning Resources</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../Task_1/learning_resources/computer_vision/task_1a_resources.html">(1A) Computer Vision</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../Task_1/learning_resources/computer_vision/computer_vision.html">Computer Vision</a></li><li class="chapter-item "><a href="../Task_1/learning_resources/computer_vision/python_tf_broadcaster.html">Transform Broadcaster (Python)</a></li><li class="chapter-item "><a href="../Task_1/learning_resources/computer_vision/python_tf_listener.html">Transform Listener (Python)</a></li></ol></li><li class="chapter-item "><a href="../Task_1/learning_resources/arm_manipulation/arm_manipulation.html">(1B) Arm Manipulation</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../Task_1/learning_resources/arm_manipulation/robotic_manipulators.html">Robotic Manipulators</a></li><li class="chapter-item "><a href="../Task_1/learning_resources/arm_manipulation/moveit/moveit.html">Moveit</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../Task_1/learning_resources/arm_manipulation/moveit/installation.html">Installation</a></li><li class="chapter-item "><a href="../Task_1/learning_resources/arm_manipulation/moveit/moveit_setup_assistant.html">Moveit Setup Assistant</a></li><li class="chapter-item "><a href="../Task_1/learning_resources/arm_manipulation/moveit/moveit_rviz.html">Moveit Rviz</a></li><li class="chapter-item "><a href="../Task_1/learning_resources/arm_manipulation/moveit/moveit_gazebo_interface.html">Moveit Gazebo Interface</a></li><li class="chapter-item "><a href="../Task_1/learning_resources/arm_manipulation/moveit/control_ur5.html">Control UR5 using Rviz</a></li></ol></li><li class="chapter-item "><a href="../Task_1/learning_resources/arm_manipulation/moveit_servo.html">Moveit Servo</a></li><li class="chapter-item "><a href="../Task_1/learning_resources/arm_manipulation/adding_object_planning_scene.html">Adding Object Planning Scene</a></li><li class="chapter-item "><a href="../Task_1/learning_resources/arm_manipulation/moveit_python_api.html">Moveit Python Interface</a></li></ol></li><li class="chapter-item "><a href="../Task_1/learning_resources/navigation/navigation.html">(1C) Autonomous Indoor Navigation</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../Task_1/learning_resources/navigation/ebot_description.html">eBot - All about eYantra Bot</a></li><li class="chapter-item "><a href="../Task_1/learning_resources/navigation/nav2/nav2.html">Nav2 - Navigation2</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../Task_1/learning_resources/navigation/nav2/nav2_installation.html">Installation</a></li></ol></li><li class="chapter-item "><a href="../Task_1/learning_resources/navigation/learn_sensors.html">Sensors</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../Task_1/learning_resources/navigation/extroceptive_sensors.html">Exteroceptive Sensor</a></li><li class="chapter-item "><a href="../Task_1/learning_resources/navigation/pereoceptive_sensors.html">Proprioceptive Sensor</a></li></ol></li><li class="chapter-item "><a href="../Task_1/learning_resources/navigation/learn_mapping.html">Mapping</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../Task_1/learning_resources/navigation/building_map.html">Using slam-toolbox</a></li><li class="chapter-item "><a href="../Task_1/learning_resources/navigation/saving_map.html">Saving the map</a></li></ol></li><li class="chapter-item "><a href="../Task_1/learning_resources/navigation/learn_localization.html">Localization</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../Task_1/learning_resources/navigation/amcl_ekf.html">AMCL & EKF</a></li><li class="chapter-item "><a href="../Task_1/learning_resources/navigation/setup_amcl_ekf.html">Setting up EKF & AMCL</a></li></ol></li><li class="chapter-item "><a href="../Task_1/learning_resources/navigation/learn_navigation.html">Navigation</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../Task_1/learning_resources/navigation/nav2_com.html">Components of Nav2</a></li></ol></li></ol></li></ol></li><li class="chapter-item "><a href="../Task_1/tasks/task1a/task1a.html">(2) Task 1A</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../Task_1/tasks/task1a/instructions.html">Instruction</a></li><li class="chapter-item "><a href="../Task_1/tasks/task1a/submissions.html">Submission</a></li></ol></li><li class="chapter-item "><a href="../Task_1/tasks/task1b/task1b.html">(3) Task 1B</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../Task_1/tasks/task1b/instructions.html">Instruction</a></li><li class="chapter-item "><a href="../Task_1/tasks/task1b/submissions.html">Submission</a></li></ol></li><li class="chapter-item "><a href="../Task_1/tasks/task1c/task1c.html">(4) Task 1C</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../Task_1/tasks/task1c/instructions.html">Instruction</a></li><li class="chapter-item "><a href="../Task_1/tasks/task1c/submissions.html">Submission</a></li></ol></li></ol></li><li class="chapter-item "><a href="../Task_2/task_2.html">Task 2</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../Task_2/tasks/task2a/task2a.html">(1) Task 2A</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../Task_2/tasks/task2a/instructions.html">Instruction</a></li><li class="chapter-item "><a href="../Task_2/tasks/task2a/submissions.html">Submission</a></li></ol></li><li class="chapter-item "><a href="../Task_2/tasks/task2b/task2b.html">(2) Task 2B</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../Task_2/tasks/task2b/learn_docking.html">Docking</a></li><li class="chapter-item "><a href="../Task_2/tasks/task2b/learn_attaching.html">Attaching Rack</a></li><li class="chapter-item "><a href="../Task_2/tasks/task2b/instructions.html">Instruction</a></li><li class="chapter-item "><a href="../Task_2/tasks/task2b/submissions.html">Submission</a></li></ol></li></ol></li></ol></li><li class="chapter-item "><a href="../Stage_2.html">Stage 2</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../Task_3/tasks/task3a/remote_setup.html">Remote Setup</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../Task_3/tasks/task3a/anydesk/anydesk_installation.html">Anydesk Installation</a></li><li class="chapter-item "><a href="../Task_3/tasks/task3a/husarnet/husarnet_installation.html">Husarnet Installation</a></li></ol></li><li class="chapter-item "><a href="../Task_3/task_3.html">Task 3</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../Task_3/tasks/task3a/task3a.html">(1) Task 3A</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../Task_3/tasks/task3a/instructions.html">Instruction</a></li><li class="chapter-item "><a href="../Task_3/tasks/task3a/submissions.html">Submission</a></li></ol></li><li class="chapter-item "><a href="../Task_3/tasks/task3b/task3b.html">(2) Task 3B</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../Task_3/tasks/task3b/instructions.html">Instruction</a></li><li class="chapter-item "><a href="../Task_3/tasks/task3b/submissions.html">Submission</a></li></ol></li></ol></li><li class="chapter-item "><a href="../Task_4/task_4.html">Task 4</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../Task_4/tasks/task4a/task4a.html">(1) Task 4A</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../Task_4/tasks/task4a/instruction.html">Instruction</a></li><li class="chapter-item "><a href="../Task_4/tasks/task4a/submission.html">Submission</a></li></ol></li><li class="chapter-item "><a href="../Task_4/tasks/task4b/task4b.html">(2) Task 4B</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../Task_4/tasks/task4b/instructions.html">Instruction</a></li><li class="chapter-item "><a href="../Task_4/tasks/task4b/submissions.html">Submission</a></li></ol></li><li class="chapter-item "><a href="../Task_4/tasks/task4c/task4c.html">(3) Task 4C</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../Task_4/tasks/task4c/instruction.html">Instruction</a></li><li class="chapter-item "><a href="../Task_4/tasks/task4c/submission.html">Submission</a></li></ol></li></ol></li><li class="chapter-item "><a href="../Task_5/task_5.html">Task 5</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../Task_5/instruction.html">Instruction</a></li><li class="chapter-item "><a href="../Task_5/submission.html">Submission</a></li><li class="spacer"></li></ol></li></ol></li><li class="chapter-item expanded "><a href="../rulebook/theme_rulebook_cl.html" class="active">Rule Book</a></li><li class="chapter-item "><a href="../git_github.html">Git and GitHub</a></li><li class="chapter-item "><a href="../coding_std.html">Coding Standards</a></li><li class="spacer"></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <!-- <html>
+ 	<head>
+ 	<style>
+ 		
+ 	@media only screen and (max-width: 600px) {
+ 	  .eyrc_ckt{
+ 			display:none;
+ 		}
+ 	}
+ 
+ 	</style>
+ 	</head>
+ 	<body>
+ 		<div>
+ 		<center></center>
+ 			<div style="display:flex; justify-content:space-between;padding:10px;padding-top:0">
+ 				<div >
+ 					<img src="https://www.e-yantra.org/img/eYantra_logo.svg" alt="e-yantra_logo" height="40px" style="padding:10px 15px;" />
+ 				</div>
+ 				<div>
+ 					<img src="https://raw.githubusercontent.com/kalindkaria/typora-md-assets/master/maze_bot/assets/eyrc-header.svg" height="80px"  class="eyrc_ckt">
+ 				</div>
+ 				<div style="font-weight:900;font-size:20px;text-align:center;padding:10px 15px">
+ 					Robotics Competition<br>
+ 					2023-24
+ 				</div>
+ 			</div>
+ 			
+ 		</div>
+ 	</body>
+ </html>
+ 
+ 
+ -->
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar autohide sticky bordered">
+                    <div style="width:100%">
+                        <html>
+                        	<head>
+                        	<style>
+                        		
+                        	@media only screen and (max-width: 600px) {
+                        	  .eyrc_ckt{
+                        			display:none;
+                        		}
+                        	}
+                        
+                        	</style>
+                        	</head>
+                        	<body>
+                        		<div>
+                        		<center></center>
+                        			<div style="display:flex; justify-content:space-between;padding:10px;padding-top:0">
+                        				<div >
+                        					<img src="https://www.e-yantra.org/img/eYantra_logo.svg" alt="e-yantra_logo" height="40px" style="padding:10px 15px;" />
+                        				</div>
+                        				<div>
+                        					<img src="https://raw.githubusercontent.com/kalindkaria/typora-md-assets/master/maze_bot/assets/eyrc-header.svg" height="80px"  class="eyrc_ckt">
+                        				</div>
+                        				<div style="font-weight:900;font-size:20px;text-align:center;padding:10px 15px">
+                        					Robotics Competition<br>
+                        					2023-24
+                        				</div>
+                        			</div>
+                        			
+                        		</div>
+                        	</body>
+                        </html>
+                        
+                        
+                    </div>
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="space">Space</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">eYRC 2023-24: Cosmo Logistic</h1>
+
+                    <div class="right-buttons">
+                        <div id="navigation-buttons" type="button" onclick=" window.open('https://portal.e-yantra.org/profile_home', '_blank')">Home</div>
+                        <div id="navigation-buttons" type="button" onclick=" window.open('https://discuss.e-yantra.org/', '_blank')">Forum</div>
+                        <div id="navigation-buttons" type="button" onclick=" window.open('https://portal.e-yantra.org/logout', '_blank')">Logout</div>
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" name="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <!-- <center><img src="http://mooc.e-yantra.org/img/eYantra_logo.svg" alt="e-yantra_logo" style="scale:75%;" /></center> -->
+<style>
+.back{
+	position: fixed;
+	width: 250px;
+	height: 250px;
+	top: 50%;
+	left: 50%;
+    margin-top: auto; 
+    margin-left: auto; 
+	opacity: 0.15;
+    z-index: -1;
+	}
+</style>
+<!-- <img src="http://mooc.e-yantra.org/img/EyantraLogoMini.png" class="back"> -->
+<center>
+    <h1 id="theme-rulebook---cosmo-logistics-eyrc-23-24"><a class="header" href="#theme-rulebook---cosmo-logistics-eyrc-23-24">Theme Rulebook - Cosmo Logistics: eYRC 23-24</a></h1>
+</center>
+<hr />
+</br>
+<blockquote>
+<p><strong>Index</strong></p>
+<p><strong>1: Introduction</strong></p>
+<p><strong>2: Theme &amp; Arena Description</strong></p>
+<p>2.1: Model Description </p>
+<p>2.2: Terms and Definitions </p>
+<p>2.3. Theme Flow Description </p>
+<p>2.4: Arena Description </p>
+<p><strong>3: Robot Description</strong></p>
+<p>3.1: eBot </p>
+<p>3.2: 2D LiDAR </p>
+<p>3.3: UR5 robotic arm </p>
+<p>3.4: Depth Camera </p>
+<p>3.5: Magnet/Gripper </p>
+<p><strong>4: Judging and Scoring Formula</strong></p>
+<p><strong>5: Theme Rules</strong></p>
+<p>5.1 Execution Prerequisites </p>
+<p>5.2 Navigation </p>
+<p>5.3 Perception </p>
+<p>5.4 Arm Manipulation </p>
+<p>5.5 Penalty </p>
+<p>5.6 Bonus </p>
+<p>5.7 Rerun and Restart </p>
+<p>5.8 End of the Run </p>
+<p><strong>6. Disclaimer</strong></p>
+<p><strong>7: Additional Resources</strong></p>
+</blockquote>
+<hr />
+<h1 id="1-introduction"><a class="header" href="#1-introduction">1: Introduction</a></h1>
+<p>Amidst this interplanetary logistical network, a space station has been
+created near the lunar surface mimicking the Earth's gravitational pull.
+This emerged as a pivotal gateway facilitating the transportation of
+goods to and from planet Earth. The &quot;Cosmo Logistic&quot; theme of eYRC
+2023-24 is set in an autonomous warehouse used for inter-planet
+logistics from the space station. A robotic arm and mobile robot
+collaborate to sort and prepare packages to be transported to different
+planets.</p>
+<p>The team will develop an algorithm for sorting packages autonomously
+with the help of a robotic arm and mobile robot. Teams learn to navigate
+this mobile robot with the help of the SLAM (simultaneous localization
+and mapping) method in a warehouse, detect and localise the packages
+placed on racks, and manipulate the robotic arm to pick them. In stage 1
+of the competition, teams implement this theme in a simulator (Gazebo),
+and in stage 2, they will get remote access to &quot;real&quot; hardware present
+in a &quot;real&quot; warehouse at IIT Bombay.</p>
+<p>The theme is divided into tasks to build a warehouse cobot system in a
+step-by-step manner, making the process organised, simple and enjoyable
+for you. This theme's challenges include learning of:</p>
+<ul>
+<li>
+<p>Robot Operating System 2 (ROS 2),</p>
+</li>
+<li>
+<p>Autonomous Navigation,</p>
+</li>
+<li>
+<p>Computer vision, and</p>
+</li>
+<li>
+<p>Arm manipulation.</p>
+</li>
+</ul>
+<p>The challenge is to complete a given task in the shortest possible time
+whilst incurring the least penalties. The team that performs the task
+best following the rules will be declared the WINNER of the competition.
+We strive our best to ensure that participants of this theme get ample
+exposure to mobile robotics and manipulators.</p>
+<h1 id="2-theme--arena-description"><a class="header" href="#2-theme--arena-description">2: Theme &amp; Arena Description</a></h1>
+<p>This theme depicts a space warehouse scenario where a robot is used in
+the e-Yantra warehouse to segregate goods on the basis of requirements
+from different planets. The warehouse consists of racks with goods
+packed in boxes and marked with Aruco markers. These boxes need to be
+segregated manually one by one. To overcome this labour-intensive work,
+there is a need to automate the process. In this theme, a robotic arm
+and mobile robot automates the process of segregating these boxes.</p>
+<p>This arena is built in the Gazebo simulator and as well as in a
+warehouse-like environment present in IIT Bombay for the remote hardware
+experience, which is used for the competition. The perspective view of
+the arena is shown in Figure 1.</p>
+<p align="center">
+  </br>
+  <img width="601.700736" height="430.666656" src="media/fig1.png">
+  </br>
+  Figure 1: Arena in Gazebo Environment
+</p>
+<h2 id="21-model-description"><a class="header" href="#21-model-description">2.1: Model Description</a></h2>
+<ul>
+<li>
+<p><strong>eBot:</strong> </p>
+<blockquote>
+<p>A 4-wheeled robot capable of navigating an arena mapped
+before, docking with the racks using electromagnet and bringing it
+in-front of the robotic arm. The bot must manoeuvre itself
+autonomously within the arena with the help of sensors available
+on-board.</p>
+</blockquote>
+</li>
+<li>
+<p><strong>UR5 arm:</strong> </p>
+<blockquote>
+<p>A highly flexible robotic arm that enables safe
+automation of repetitive, risky tasks. With a carrying capacity of
+5 KG and a radius of 850 mm, it is the perfect cobot for
+performing light tasks such as packing, assembly or testing. The
+arm should pick the boxes with the help of electromagnet and place
+it on the drop location without any collisions.</p>
+</blockquote>
+</li>
+<li>
+<p><strong>Arena</strong>: </p>
+<blockquote>
+<p>The warehouse environment in which the boxes need to be
+segregated (perspective view as shown in Figure 1 above).</p>
+</blockquote>
+</li>
+</ul>
+<h2 id="22-terms-and-definitions"><a class="header" href="#22-terms-and-definitions">2.2: Terms and Definitions</a></h2>
+<blockquote>
+<p>Figure 2 and Table 1 describe the objects in the arena.</p>
+</blockquote>
+<p align="center">
+  </br>
+  <img width="541.999968" height="380.523264" src="media/fig2.png">
+  </br>
+  Figure 2: Different objects in the arena
+</p>
+<table>
+    <thead align="center">
+        <tr>
+        <th>Objects</th>
+        <th>Image</th>
+        <th>Description</th>
+        </tr>
+    </thead>
+    <tbody align="center">
+        <tr>
+            <td>Rack</td>
+            <td><img width="147.999936" height="223.999968" src="media/tab1_rack.png"></td>
+            <td>Team has to attach the specified rack to the eBot and bring it in front of the arm to continue with segregation of packages. During the traversal of eBot with rack, the team has to avoid collision with any other object in the arena.</td>
+        </tr>
+        <tr>
+            <td>eBot</td>
+            <td><img width="164.500032" height="154.496544" src="media/tab1_ebot.png"></td>
+            <td>eBot is the mobile robot used in the theme. It has a payload capacity of 100 Kg.</td>
+        </tr>
+        <tr>
+            <td>UR5</td>
+            <td><img width="147.999936" height="149.33328" src="media/tab1_ur5.png"></td>
+            <td>The Universal Robot UR5 is a highly flexible robotic arm used in the theme that enables the safe automation of repetitive and risky tasks. It has a carrying capacity of 5 Kg.</td>
+        </tr>
+        <tr>
+            <td>Package Box</td>
+            <td><img width="117" height="131.828064" src="media/tab1_box.png"></td>
+            <td>These boxes are attached with Aruco markers on the front side. These Aruco markers have the number embedded into it which can be decoded using image processing.</td>
+        </tr>
+            <td colspan="3"><b><i>Table 1: Objects along with their description in the arena</i></b></td>
+        </tr>
+    </tbody>
+</table>
+<h2 id="23-theme-flow-description"><a class="header" href="#23-theme-flow-description">2.3. Theme Flow Description</a></h2>
+<ul>
+<li>
+<p>The task is to collect all the specified package boxes based on the
+configuration given by using eBot and UR5 robotic arm in the
+warehouse. The eBot brings the rack(s) containing boxes in front
+of the stationary robotic arm and thereafter the arm picks the box
+from the rack and places it on the table (or drop location).</p>
+</li>
+<li>
+<p>The configuration file will be given before the run; a YAML file
+consisting of rack position (x, y, angle with respect to the
+eBot's initial position) and the package(s) to be picked with
+their ID number as the Aruco ID on the box. Each rack will have
+the same name as the Aruco ID associated with the box it has.
+Since there is only one box per rack which can be picked up,
+therefore the rack name and the box name remain the same for each.
+For example if a rack has a box with Aruco ID as 02, then the rack
+would be named as <code>rack2</code>. The YAML file looks like:</p>
+<pre><code>position:
+   rack1: [1, 2, 1.57]
+   rack2: [2, 3, 5.21]
+package_id: [2, 3, 5]
+</code></pre>
+</li>
+<li>
+<p>eBot begins its execution from the start position as shown in Figure
+4 of the simulation/real-world environment. Home position of the
+bot is the spawn location itself.</p>
+</li>
+<li>
+<p>eBot has to then navigate within the warehouse without any collision
+to make sure that the specified boxes in the configuration are
+placed correctly by docking underneath the rack, turning on the
+electromagnet to attach the eBot to the rack and bringing it in
+front of the robotic arm.</p>
+</li>
+<li>
+<p>The robotic arm has to pick the package box which is on the rack
+using Moveit servo or by using in-built algorithms of the moveit
+package.</p>
+</li>
+<li>
+<p>It has to finally drop those boxes into the drop location which is
+behind the arm (for drop position check figure 3 given below where
+the box is placed on the table behind the arm).</p>
+<p align="center">
+</br>
+<img width="348.999936" height="300" src="media/fig3.png">
+</br>
+Figure 3: Drop location of the boxes is behind the arm.
+</p>
+</li>
+</ul>
+<h2 id="24-arena-description"><a class="header" href="#24-arena-description">2.4: Arena Description</a></h2>
+<blockquote>
+<p>Figure 4 shows the sample camera view of the arena in IITB Warehouse.</p>
+</blockquote>
+<ul>
+<li>
+<p>Size of the room is approximately 12m x 20m</p>
+</li>
+<li>
+<p>Views from 5 CCTV cameras and 1 realsense camera will be provided during the remote session.</p>
+<p align="center">
+</br>
+<img width="576.499968" height="413.70096" src="media/fig4.png">
+</br>
+Figure 4: Remote Hardware Arena
+</p>
+</li>
+</ul>
+<p>Details of the arena are as follows:</p>
+<ul>
+<li>
+<p>One rack will always be kept on the right side of UR5 to start with the run. This is shown in the top right image of Figure 4.</p>
+</li>
+<li>
+<p>Team can start manipulation and navigation in parallel to save time.</p>
+</li>
+<li>
+<p>Position of racks in the arena are fixed and will not change.</p>
+</li>
+<li>
+<p>Total number of racks in the arena is 3 and each rack will contain only 1 box that can be picked.</p>
+</li>
+<li>
+<p>Obstacle location will be random.</p>
+</li>
+<li>
+<p>More about dimension and details about components can be found in Section 3.</p>
+</li>
+</ul>
+<p><strong>NOTE:</strong> This is just a sample representation of the arena to get an
+idea of the same. The dimension and position of the drawings of objects
+are not in scale and according to the hardware arena.</p>
+<h1 id="3-robot-description"><a class="header" href="#3-robot-description"><a href="https://www.cse.iitb.ac.in/~saail/rulebook/AB-robot_description.html#3-robot-description">3: Robot Description</a></a></h1>
+<h2 id="31-ebot"><a class="header" href="#31-ebot">3.1: eBot</a></h2>
+<p>It is a four-wheeled robot that works on a skid steer drive control
+mechanism. eBot consists of various sensors such as encoders, 2D LIDAR
+and an Inertial Measurement Unit (IMU). Electromagnet (not shown in
+Figure 5) is mounted on top of the robot.</p>
+<p align="center">
+</br>
+<img width="343.999968" height="228.999936" src="media/fig5.png">
+</br>
+Figure 5: eBot
+</p>
+<table>
+    <thead align="center">
+        <tr>
+        <th>Specification</th>
+        <th>Measurement</th>
+        </tr>
+    </thead>
+    <tbody align="center">
+        <tr>
+            <td>Dimension, Length</td>
+            <td>650 mm (+/- 10 mm)</td>
+        </tr>
+        <tr>
+            <td>Dimension, Width</td>
+            <td>500 mm (+/- 10 mm)</td>
+        </tr>
+        <tr>
+            <td>Dimension, Height</td>
+            <td>310 mm (+/- 10 mm)</td>
+        </tr>
+        <tr>
+            <td>Track Width</td>
+            <td>440 mm (+/- 10 mm)</td>
+        </tr>
+        <tr>
+            <td>Wheelbase Length</td>
+            <td>420 mm (+/- 10 mm)</td>
+        </tr>
+        <tr>
+            <td>Diameter of wheel</td>
+            <td>210 mm (+/- 10 mm)</td>
+        </tr>
+        <tr>
+            <td>Ground Clearance</td>
+            <td>60 mm (+/- 10 mm)</td>
+        </tr>
+        <tr>
+            <td>Mass</td>
+            <td>32 kg</td>
+        </tr>
+        <tr>
+            <td>Speed, Maximum</td>
+            <td>1 m/s (Calculated)</td>
+        </tr>
+        <tr>
+            <td>Climb Angle, Maximum</td>
+            <td>~10° (Tested)</td>
+        </tr>
+    </tbody>
+</table>
+<p align="center">
+</br>
+<img width="601.700736" height="449.33328" src="media/fig6.png">
+</br>
+Figure 6: Back view of eBot
+</p>
+<table>
+    <thead align="center">
+        <tr>
+        <th>Component</th>
+        <th>Description</th>
+        </tr>
+    </thead>
+    <tbody align="center">
+        <tr>
+            <td>1</td>
+            <td>LED Indicator</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>On/Off Switch</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>Reset Switch</td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>5V (Top) and 12V (Bottom) Voltage Source</td>
+        </tr>
+        <tr>
+            <td>5</td>
+            <td>Emergency Switch</td>
+        </tr>
+        <tr>
+            <td>6</td>
+            <td>LCD Screen</td>
+        </tr>
+        <tr>
+            <td>7</td>
+            <td>Battery Connector</td>
+        </tr>
+        <tr>
+            <td>8</td>
+            <td>Ultrasonic sensors</td>
+        </tr>
+        <tr>
+            <td>9</td>
+            <td>Back wheels</td>
+        </tr>
+    </tbody>
+</table>
+<p align="center">
+</br>
+<img width="601.700736" height="474.666624" src="media/fig7.png">
+</br>
+Figure 7: Front view of eBot
+</p>
+<table>
+    <thead align="center">
+        <tr>
+        <th>Component</th>
+        <th>Description</th>
+        </tr>
+    </thead>
+    <tbody align="center">
+        <tr>
+            <td>1</td>
+            <td>LIDAR</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>Eye LEDs</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>External connection for Docking</td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>Front wheels</td>
+        </tr>
+        <tr>
+            <td>5</td>
+            <td>Ultrasonic sensors</td>
+        </tr>
+    </tbody>
+</table>
+<h2 id="32-2d-lidar"><a class="header" href="#32-2d-lidar">3.2: 2D LiDAR</a></h2>
+<p>The following are the features of the 2D LiDAR sensor used in an eBot:</p>
+<ol>
+<li>
+<p>Working range of 0.5m to 20m.</p>
+</li>
+<li>
+<p>Scanning angle of 270 degrees.</p>
+</li>
+</ol>
+<p align="center">
+</br>
+<img width="150" height="192" src="media/fig8.png">
+</br>
+Figure 8: 2D LiDAR
+</p>
+<h2 id="33-ur5-robotic-arm"><a class="header" href="#33-ur5-robotic-arm">3.3: UR5 robotic arm</a></h2>
+<p>The Universal Robot UR5 is a highly flexible robotic arm that enables
+the safe automation of repetitive and risky tasks. With a carrying
+capacity of 5 KG and a radius of 850 mm, it is the perfect cobot for
+performing light tasks such as packing, assembly, or testing.</p>
+<p align="center">
+</br>
+<img width="337.1496" height="328.553664" src="media/fig9.png">
+</br>
+Figure 9: UR5 Robotic Arm
+</p>
+<table>
+    <thead align="center">
+        <tr>
+        <th>System Parameter</th>
+        <th>UR5</th>
+        </tr>
+    </thead>
+    <tbody align="center">
+        <tr>
+            <td>Degrees of Freedom</td>
+            <td>6 rotating joints</td>
+        </tr>
+        <tr>
+            <td>Payload</td>
+            <td>5 kg / 11 lbs</td>
+        </tr>
+        <tr>
+            <td>Repeatability</td>
+            <td>±0.1 mm / ±0.0039 in (4 mils)</td>
+        </tr>
+        <tr>
+            <td>Weight with cable</td>
+            <td>18.4 kg / 40.6 lbs</td>
+        </tr>
+        <tr>
+            <td>Reach</td>
+            <td>850 mm / 33.5 in</td>
+        </tr>
+        <tr>
+            <td>Motion Range</td>
+            <td>Base: ± 360°</br>
+                Shoulder: ± 360°</br>               
+                Elbow: ± 360°</br>             
+                Wrist 1: ± 360°</br>           
+                Wrist 2: ± 360°</br>                            
+                Wrist 3: ± 360°
+            </td>
+        </tr>
+        <tr>
+            <td>Maximum Speed</td>
+            <td>Base: ± 180°/Sec.</br>
+                Shoulder: ± 180°/Sec.</br>
+                Elbow: ± 180°/Sec.</br>
+                Wrist 1: ± 180°/Sec.</br>
+                Wrist 2: ± 180°/Sec.</br>
+                Wrist 3: ± 180°/Sec.
+            </td>
+        </tr>
+        <tr>
+            <td>Power Consumption</td>
+            <td>Min 90W, Typical 150W, Max 325W</td>
+        </tr>
+        <tr>
+            <td>Robot Mounting</td>
+            <td>Any</td>
+        </tr>
+        <tr>
+            <td>Ambient Temperature Range</td>
+            <td>0-50°</td>
+        </tr>
+    </tbody>
+</table>
+<h2 id="34-depth-camera"><a class="header" href="#34-depth-camera">3.4: Depth Camera</a></h2>
+<p>The depth camera used is of stereo depth type and has a range of 0.105m
+to 10m. It also has an inbuilt IMU sensor.</p>
+<p align="center">
+</br>
+<img width="334.999968" height="142.179648" src="media/fig10.png">
+</br>
+Figure 10: Depth Camera used in the Cosmo Logistic
+</p>
+<p><strong>NOTE:</strong> <strong>There might be slight differences between the simulator and
+real hardware</strong>.</p>
+<h2 id="35-magnetgripper"><a class="header" href="#35-magnetgripper">3.5: Magnet/Gripper</a></h2>
+<p>This is a custom made magnet case for picking up objects using magnetic
+force. The boxes have a metal plate embedded inside them (behind the
+Aruco marker), which will help the arm to pick the box using its magnet.
+The gripper consists of two electromagnets attached in parallel to 24V
+DC supply with each consuming 0.25A. The user needs to make sure that
+the plane of magnet and box surface are parallel while trying to pick
+the box.</p>
+<p align="center">
+</br>
+<img src="media/fig11.png">
+</br>
+Figure 11: Electromagnet on eBot used for attaching rack
+</p>
+<p align="center">
+</br>
+<img width="244.1496" height="199.999968" src="media/fig12.png">
+</br>
+Figure 12: Electromagnet on UR5 used for attaching box
+</p>
+<h1 id="4-judging-and-scoring-formula"><a class="header" href="#4-judging-and-scoring-formula">4: Judging and Scoring Formula</a></h1>
+<p>The team's total score is calculated using the following formula</p>
+<blockquote>
+<p><strong>Total_marks</strong> = (900-T) * 0.4 + ACI * 10 + ACP * 50 + ACD * 50 + ECN * 50 + ECP * 20 + ECD * 50 - P * 25 + B * 300</p>
+</blockquote>
+<p>The abbreviation details are as follows:</p>
+<blockquote>
+<p><strong>T: Total time</strong> taken for the run. If it is found to be greater
+than 900 seconds or no valid run, then the marks for the time will
+be made zero.</p>
+<p><strong>Valid Run:</strong> A run is considered valid if the team is able to
+place at least one box on the drop table.</p>
+<p><strong>ACI: Arm Correct Identification</strong>, parameter is increased when the
+TF is correctly published pointing to the Aruco marker's centre
+position. The maximum value of this parameter is 3.</p>
+<p><strong>ACP: Arm Correct Position</strong>, parameter increases when the package
+is picked up using the magnetic gripper on the arm. The maximum
+value of this parameter is 3.</p>
+<p><strong>ACD: Arm Correct Drop</strong>, parameter increases when the package is
+dropped on the table kept behind the arm. The maximum value of
+this parameter is 3.</p>
+<p><strong>ECN: eBot Correct Navigation</strong>, parameter increases when the eBot
+is within the desired perimeter of the rack. Repeated attempts to
+enter into the area of the same rack will not yield to any
+additional marks. The maximum value of this parameter is 2.</p>
+<p><strong>ECP: eBot Correct Pick</strong>, parameter increases when the eBot has
+correctly docked and attached the rack with the eBot using magnet.
+The maximum value of this parameter is 2.</p>
+<p><strong>ECD: eBot Correct Drop</strong>, parameter increases when the eBot has
+correctly dropped the rack in front of the arm. The maximum value
+of this parameter is 2.</p>
+<p><strong>P: Penalty</strong>, parameter increases for any point given in the theme
+rules penalty section.</p>
+<p><strong>B: Bonus</strong>, is a binary parameter. It will be considered as one,
+if the team completes the given task of placing specified boxes on
+the drop table without any penalty.</p>
+</blockquote>
+<p><strong>Note:</strong> Detection and recognition of package boxes other than the
+specified ones will yield no marks.</p>
+<h1 id="5-theme-rules"><a class="header" href="#5-theme-rules"><strong>5: Theme Rules</strong></a></h1>
+<p><em>Read all instructions carefully to maximise your score.</em></p>
+<h2 id="51-execution-prerequisites"><a class="header" href="#51-execution-prerequisites">5.1 Execution Prerequisites</a></h2>
+<ul>
+<li>
+<p>The timer will start when the eBot starts to move for the first time.</p>
+</li>
+<li>
+<p>The maximum time to complete the task is 900 seconds (15 minutes).</p>
+</li>
+<li>
+<p>A run will be considered <strong>valid</strong> only when-</p>
+<ul>
+<li>The team has correctly identified and correctly Pick-&amp;-Place at least one package box in the drop location.</li>
+</ul>
+</li>
+<li>
+<p>Once the robot starts, manual teleop operations are NOT allowed. If made, that intervention is treated as cheating, and the run will not be considered for evaluation.</p>
+</li>
+<li>
+<p>Time will be considered maximum if the Valid Run criterion is not achieved.</p>
+</li>
+</ul>
+<h2 id="52-navigation"><a class="header" href="#52-navigation">5.2 Navigation</a></h2>
+<ul>
+<li>
+<p>The eBot should start navigating the arena from the Home position or Start zone (i.e., the spawn position itself).</p>
+</li>
+<li>
+<p>Teams are allowed to make eBot follow any order/pattern of navigating the entire arena.</p>
+</li>
+<li>
+<p>The eBot should be within the desired perimeter of the rack i.e. 1m x 1m area around the rack to consider a valid ECN.</p>
+</li>
+<li>
+<p>eBot should drop the rack within the specified boundary as shown in figure 3 from the UR5 base for a valid ECD drop.</p>
+</li>
+</ul>
+<h2 id="53-perception"><a class="header" href="#53-perception">5.3 Perception</a></h2>
+<ul>
+<li>
+<p>Teams are awarded points for every correctly identified (ACI) Aruco marker box. To get ACI, teams must display the transform, i.e., 'tf' of the desired object with its identity inside the RViz.</p>
+</li>
+<li>
+<p>Teams should also broadcast 'tf' continuously for each package box with respect to <code>base_link</code>. For other frames of reference (like the camera), the team should rename the frame accordingly.</p>
+</li>
+<li>
+<p>The name of the TF should be <code>obj_&lt;aruco_id&gt;</code>. Repeated publishing of TF will not yield any additional marks.</p>
+</li>
+</ul>
+<h2 id="54-arm-manipulation"><a class="header" href="#54-arm-manipulation">5.4 Arm Manipulation</a></h2>
+<ul>
+<li>
+<p>Adhere to the instructions given in the scoring formula section related to ACI, ACP and ACD.</p>
+</li>
+<li>
+<p>Make sure that any action taken by the arm should not lead into collision with the rack, table, base or itself. In case of the same, it will lead to a penalty.</p>
+</li>
+<li>
+<p>After picking the package box a related information can be printed in the terminal, for example, <code>&lt;object_name&gt;_Picked</code>.</p>
+</li>
+<li>
+<p>The dropping of the box should not lead to falling off the same box or the other box on the dropping location. If found, the ACD parameter value will not be increased. Related information can be printed in the terminal, for example <code>&lt;object_name&gt;_Dropped</code>.</p>
+</li>
+</ul>
+<h2 id="55-penalty"><a class="header" href="#55-penalty">5.5 Penalty</a></h2>
+<p>Penalty will be considered if:</p>
+<ul>
+<li>
+<p>The arm collides/damages any of the rack, table, UR5 base or itself.</p>
+</li>
+<li>
+<p>The eBot collides with walls, obstacles on the arena or the base of UR5.</p>
+</li>
+<li>
+<p>After correctly picking the rack and eBot is considered as one body, therefore any collision to the rack during its transit is considered as collision with eBot.</p>
+</li>
+</ul>
+<h2 id="56-bonus"><a class="header" href="#56-bonus">5.6 Bonus</a></h2>
+<ul>
+<li>A bonus will be given for all the specified boxes are identified, picked, and deposited from the rack on the table (drop position) kept behind the arm, without any collision.</li>
+</ul>
+<h2 id="57-rerun-and-restart"><a class="header" href="#57-rerun-and-restart">5.7 Rerun and Restart</a></h2>
+<ul>
+<li>
+<p>Team will get in total 2 runs, if a team opts for re-run it should be made known to the developers before a valid run is completed.</p>
+</li>
+<li>
+<p>If the team completes a valid run, they will not be able to opt for a re-run.</p>
+</li>
+<li>
+<p>The eBot will be stopped manually if it is seen to be damaging/colliding any objects on the arena.</p>
+</li>
+<li>
+<p>The eBot if found in a non-recoverable position or in a collision position, the control will be taken away from the team and it will be brought back to a safe distance away from the collided position. After that the eBot's control will be given back to the team for further movement. During this process the team is not allowed to change the code, or make any input to the team's computer.</p>
+</li>
+<li>
+<p>If the arm results in a protective stop (i.e. if arm enters into self protection sequence while manipulation) the arm will be brought back to a normal state (i.e. default start state) by the developers. During the process the team is not allowed to give any input to the computer.</p>
+</li>
+</ul>
+<h2 id="58-end-of-the-run"><a class="header" href="#58-end-of-the-run">5.8 End of the Run</a></h2>
+<ul>
+<li>
+<p>End of the run will be considered whenever the team completes the whole task by placing all the specified boxes as per the configuration on the drop table using eBot and arm.</p>
+</li>
+<li>
+<p>Or, whenever the team requests for the end of the run by conveying the same to the theme developers during the run.</p>
+</li>
+</ul>
+<h1 id="6-disclaimer"><a class="header" href="#6-disclaimer">6: Disclaimer</a></h1>
+<p>In case of any disputes/discrepancies, the e-Yantra decision is final
+and binding. e-Yantra reserves the right to change any or all of the
+above rules as we deem fit. Any changes to the rules will be highlighted
+on the website and notified to the participating teams.</p>
+<h1 id="7-additional-resources"><a class="header" href="#7-additional-resources">7: Additional Resources</a></h1>
+<ul>
+<li>
+<p><a href="https://www.intelrealsense.com/beginners-guide-to-depth/">[https://www.intelrealsense.com/beginners-guide-to-depth/]{.underline}</a></p>
+</li>
+<li>
+<p><a href="https://www.intelrealsense.com/depth-camera-d435i/">[https://www.intelrealsense.com/depth-camera-d435i/]{.underline}</a></p>
+</li>
+<li>
+<p><a href="https://www.sick.com/in/en/detection-and-ranging-solutions/2d-lidar-sensors/lms1xx/c/g91901">[https://www.sick.com/in/en/detection-and-ranging-solutions/2d-lidar-sensors/lms1xx/c/g91901]{.underline}</a></p>
+</li>
+<li>
+<p><a href="https://www.universal-robots.com/products/ur5-robot/">[https://www.universal-robots.com/products/ur5-robot/]{.underline}</a></p>
+</li>
+<li>
+<p><a href="https://clearpathrobotics.com/blog/2020/07/clearpath-robots-get-new-gazebo-simulation-environments/">[https://clearpathrobotics.com/blog/2020/07/clearpath-robots-get-new-gazebo-simulation-environments/]{.underline}</a></p>
+</li>
+</ul>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../Task_5/submission.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next" href="../git_github.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../Task_5/submission.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next" href="../git_github.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../searcher.js" type="text/javascript" charset="utf-8"></script>
+
+        <script src="../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        <script type="text/javascript" src="../sidebar.js"></script>
+
+
+    </body>
+</html>

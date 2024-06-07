@@ -1,0 +1,468 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js navy">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Instruction - eYRC 2023-24: Cosmo Logistic</title>
+
+
+        <!-- Custom HTML head -->
+        
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <!-- 
+        <link rel="icon" href="../../../favicon.svg">
+         -->
+        <link rel="shortcut icon" href="../../../favicon.png">
+        <link rel="stylesheet" href="../../../css/variables.css">
+        <link rel="stylesheet" href="../../../css/general.css">
+        <link rel="stylesheet" href="../../../css/chrome.css">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../../../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../../../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../../../highlight.css">
+        <link rel="stylesheet" href="../../../tomorrow-night.css">
+        <link rel="stylesheet" href="../../../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        <link rel="stylesheet" href="../../../style.css">
+
+        <!-- MathJax -->
+        <script async type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "../../../";
+            var default_theme = "navy";
+            <!-- window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "navy"; -->
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('navy')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item affix "><a href="../../../welcome.html">Welcome to Cosmo Logistic theme!</a></li><li class="spacer"></li><li class="chapter-item "><a href="../../../deadlines.html">Deadlines</a></li><li class="spacer"></li><li class="chapter-item "><a href="../../../Stage_1.html">Stage 1</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../../coding_contest.html">Codechef Contest</a></li><li class="chapter-item "><a href="../../../github_challenge.html">Github Challenge</a></li><li class="chapter-item "><a href="../../../Task_0/task_0.html">Task 0</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../../Task_0/installation/installation_guide.html">(1) Software Install</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../../Task_0/installation/humble_installation.html">- ROS 2 Humble Installation</a></li></ol></li><li class="chapter-item "><a href="../../../Task_0/learning_resources/learning_resources.html">(2) Learning Resources</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../../Task_0/learning_resources/linux/linux_resources.html">I. Linux Resources</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../../Task_0/learning_resources/linux/linux_file_system_directories.html">Linux File System Directories</a></li><li class="chapter-item "><a href="../../../Task_0/learning_resources/linux/linux_file_permissions.html">Linux File Permissions</a></li><li class="chapter-item "><a href="../../../Task_0/learning_resources/linux/linux_file_commands.html">Linux File Commands</a></li><li class="chapter-item "><a href="../../../Task_0/learning_resources/linux/shell_scripting.html">Shell Scripting</a></li></ol></li><li class="chapter-item "><a href="../../../Task_0/learning_resources/ros_basics/ros_workspace.html">II. ROS 2 Workspace</a></li><li class="chapter-item "><a href="../../../Task_0/learning_resources/ros_basics/ros_package.html">III. ROS 2 Package</a></li><li class="chapter-item "><a href="../../../Task_0/learning_resources/ros_basics/ros_nodes.html">IV. ROS 2 Nodes</a></li><li class="chapter-item "><a href="../../../Task_0/learning_resources/ros_basics/ros_launch.html">V. ROS 2 Launch</a></li><li class="chapter-item "><a href="../../../Task_0/learning_resources/ros_basics/ros_topic.html">VI. ROS 2 Topic</a></li><li class="chapter-item "><a href="../../../Task_0/learning_resources/ros_basics/ros_service.html">VII. ROS 2 Service</a></li><li class="chapter-item "><a href="../../../Task_0/learning_resources/ros_basics/ros_action.html">VIII. ROS 2 Action</a></li><li class="chapter-item "><a href="../../../Task_0/learning_resources/robotics_simulation_overview.html">IX. Robotics Simulation Overview</a></li><li class="chapter-item "><a href="../../../Task_0/learning_resources/python_quick_tutorials.html">X. Python Quick Tutorials</a></li></ol></li><li class="chapter-item "><a href="../../../Task_0/warehouse_setup_task/warehouse_setup_task.html">(3) Warehouse Setup</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../../Task_0/warehouse_setup_task/task_instruction.html">- Task 0 - Instructions</a></li><li class="chapter-item "><a href="../../../Task_0/warehouse_setup_task/task_submission.html">- Task 0 - Submission</a></li></ol></li></ol></li><li class="chapter-item "><a href="../../../Task_1/task_1.html">Task 1</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../../Task_1/learning_resources/learning_resources.html">(1) Learning Resources</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../../Task_1/learning_resources/computer_vision/task_1a_resources.html">(1A) Computer Vision</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../../Task_1/learning_resources/computer_vision/computer_vision.html">Computer Vision</a></li><li class="chapter-item "><a href="../../../Task_1/learning_resources/computer_vision/python_tf_broadcaster.html">Transform Broadcaster (Python)</a></li><li class="chapter-item "><a href="../../../Task_1/learning_resources/computer_vision/python_tf_listener.html">Transform Listener (Python)</a></li></ol></li><li class="chapter-item "><a href="../../../Task_1/learning_resources/arm_manipulation/arm_manipulation.html">(1B) Arm Manipulation</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../../Task_1/learning_resources/arm_manipulation/robotic_manipulators.html">Robotic Manipulators</a></li><li class="chapter-item "><a href="../../../Task_1/learning_resources/arm_manipulation/moveit/moveit.html">Moveit</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../../Task_1/learning_resources/arm_manipulation/moveit/installation.html">Installation</a></li><li class="chapter-item "><a href="../../../Task_1/learning_resources/arm_manipulation/moveit/moveit_setup_assistant.html">Moveit Setup Assistant</a></li><li class="chapter-item "><a href="../../../Task_1/learning_resources/arm_manipulation/moveit/moveit_rviz.html">Moveit Rviz</a></li><li class="chapter-item "><a href="../../../Task_1/learning_resources/arm_manipulation/moveit/moveit_gazebo_interface.html">Moveit Gazebo Interface</a></li><li class="chapter-item "><a href="../../../Task_1/learning_resources/arm_manipulation/moveit/control_ur5.html">Control UR5 using Rviz</a></li></ol></li><li class="chapter-item "><a href="../../../Task_1/learning_resources/arm_manipulation/moveit_servo.html">Moveit Servo</a></li><li class="chapter-item "><a href="../../../Task_1/learning_resources/arm_manipulation/adding_object_planning_scene.html">Adding Object Planning Scene</a></li><li class="chapter-item "><a href="../../../Task_1/learning_resources/arm_manipulation/moveit_python_api.html">Moveit Python Interface</a></li></ol></li><li class="chapter-item "><a href="../../../Task_1/learning_resources/navigation/navigation.html">(1C) Autonomous Indoor Navigation</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../../Task_1/learning_resources/navigation/ebot_description.html">eBot - All about eYantra Bot</a></li><li class="chapter-item "><a href="../../../Task_1/learning_resources/navigation/nav2/nav2.html">Nav2 - Navigation2</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../../Task_1/learning_resources/navigation/nav2/nav2_installation.html">Installation</a></li></ol></li><li class="chapter-item "><a href="../../../Task_1/learning_resources/navigation/learn_sensors.html">Sensors</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../../Task_1/learning_resources/navigation/extroceptive_sensors.html">Exteroceptive Sensor</a></li><li class="chapter-item "><a href="../../../Task_1/learning_resources/navigation/pereoceptive_sensors.html">Proprioceptive Sensor</a></li></ol></li><li class="chapter-item "><a href="../../../Task_1/learning_resources/navigation/learn_mapping.html">Mapping</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../../Task_1/learning_resources/navigation/building_map.html">Using slam-toolbox</a></li><li class="chapter-item "><a href="../../../Task_1/learning_resources/navigation/saving_map.html">Saving the map</a></li></ol></li><li class="chapter-item "><a href="../../../Task_1/learning_resources/navigation/learn_localization.html">Localization</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../../Task_1/learning_resources/navigation/amcl_ekf.html">AMCL & EKF</a></li><li class="chapter-item "><a href="../../../Task_1/learning_resources/navigation/setup_amcl_ekf.html">Setting up EKF & AMCL</a></li></ol></li><li class="chapter-item "><a href="../../../Task_1/learning_resources/navigation/learn_navigation.html">Navigation</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../../Task_1/learning_resources/navigation/nav2_com.html">Components of Nav2</a></li></ol></li></ol></li></ol></li><li class="chapter-item "><a href="../../../Task_1/tasks/task1a/task1a.html">(2) Task 1A</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../../Task_1/tasks/task1a/instructions.html">Instruction</a></li><li class="chapter-item "><a href="../../../Task_1/tasks/task1a/submissions.html">Submission</a></li></ol></li><li class="chapter-item "><a href="../../../Task_1/tasks/task1b/task1b.html">(3) Task 1B</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../../Task_1/tasks/task1b/instructions.html">Instruction</a></li><li class="chapter-item "><a href="../../../Task_1/tasks/task1b/submissions.html">Submission</a></li></ol></li><li class="chapter-item "><a href="../../../Task_1/tasks/task1c/task1c.html">(4) Task 1C</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../../Task_1/tasks/task1c/instructions.html">Instruction</a></li><li class="chapter-item "><a href="../../../Task_1/tasks/task1c/submissions.html">Submission</a></li></ol></li></ol></li><li class="chapter-item "><a href="../../../Task_2/task_2.html">Task 2</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../../Task_2/tasks/task2a/task2a.html">(1) Task 2A</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../../Task_2/tasks/task2a/instructions.html">Instruction</a></li><li class="chapter-item "><a href="../../../Task_2/tasks/task2a/submissions.html">Submission</a></li></ol></li><li class="chapter-item "><a href="../../../Task_2/tasks/task2b/task2b.html">(2) Task 2B</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../../Task_2/tasks/task2b/learn_docking.html">Docking</a></li><li class="chapter-item "><a href="../../../Task_2/tasks/task2b/learn_attaching.html">Attaching Rack</a></li><li class="chapter-item "><a href="../../../Task_2/tasks/task2b/instructions.html">Instruction</a></li><li class="chapter-item "><a href="../../../Task_2/tasks/task2b/submissions.html">Submission</a></li></ol></li></ol></li></ol></li><li class="chapter-item expanded "><a href="../../../Stage_2.html">Stage 2</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../../Task_3/tasks/task3a/remote_setup.html">Remote Setup</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../../Task_3/tasks/task3a/anydesk/anydesk_installation.html">Anydesk Installation</a></li><li class="chapter-item "><a href="../../../Task_3/tasks/task3a/husarnet/husarnet_installation.html">Husarnet Installation</a></li></ol></li><li class="chapter-item "><a href="../../../Task_3/task_3.html">Task 3</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../../Task_3/tasks/task3a/task3a.html">(1) Task 3A</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../../Task_3/tasks/task3a/instructions.html">Instruction</a></li><li class="chapter-item "><a href="../../../Task_3/tasks/task3a/submissions.html">Submission</a></li></ol></li><li class="chapter-item "><a href="../../../Task_3/tasks/task3b/task3b.html">(2) Task 3B</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../../Task_3/tasks/task3b/instructions.html">Instruction</a></li><li class="chapter-item "><a href="../../../Task_3/tasks/task3b/submissions.html">Submission</a></li></ol></li></ol></li><li class="chapter-item expanded "><a href="../../../Task_4/task_4.html">Task 4</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../../Task_4/tasks/task4a/task4a.html">(1) Task 4A</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../../Task_4/tasks/task4a/instruction.html" class="active">Instruction</a></li><li class="chapter-item "><a href="../../../Task_4/tasks/task4a/submission.html">Submission</a></li></ol></li><li class="chapter-item "><a href="../../../Task_4/tasks/task4b/task4b.html">(2) Task 4B</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../../Task_4/tasks/task4b/instructions.html">Instruction</a></li><li class="chapter-item "><a href="../../../Task_4/tasks/task4b/submissions.html">Submission</a></li></ol></li><li class="chapter-item "><a href="../../../Task_4/tasks/task4c/task4c.html">(3) Task 4C</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../../Task_4/tasks/task4c/instruction.html">Instruction</a></li><li class="chapter-item "><a href="../../../Task_4/tasks/task4c/submission.html">Submission</a></li></ol></li></ol></li><li class="chapter-item "><a href="../../../Task_5/task_5.html">Task 5</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../../Task_5/instruction.html">Instruction</a></li><li class="chapter-item "><a href="../../../Task_5/submission.html">Submission</a></li><li class="spacer"></li></ol></li></ol></li><li class="chapter-item "><a href="../../../rulebook/theme_rulebook_cl.html">Rule Book</a></li><li class="chapter-item "><a href="../../../git_github.html">Git and GitHub</a></li><li class="chapter-item "><a href="../../../coding_std.html">Coding Standards</a></li><li class="spacer"></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <!-- <html>
+ 	<head>
+ 	<style>
+ 		
+ 	@media only screen and (max-width: 600px) {
+ 	  .eyrc_ckt{
+ 			display:none;
+ 		}
+ 	}
+ 
+ 	</style>
+ 	</head>
+ 	<body>
+ 		<div>
+ 		<center></center>
+ 			<div style="display:flex; justify-content:space-between;padding:10px;padding-top:0">
+ 				<div >
+ 					<img src="https://www.e-yantra.org/img/eYantra_logo.svg" alt="e-yantra_logo" height="40px" style="padding:10px 15px;" />
+ 				</div>
+ 				<div>
+ 					<img src="https://raw.githubusercontent.com/kalindkaria/typora-md-assets/master/maze_bot/assets/eyrc-header.svg" height="80px"  class="eyrc_ckt">
+ 				</div>
+ 				<div style="font-weight:900;font-size:20px;text-align:center;padding:10px 15px">
+ 					Robotics Competition<br>
+ 					2023-24
+ 				</div>
+ 			</div>
+ 			
+ 		</div>
+ 	</body>
+ </html>
+ 
+ 
+ -->
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar autohide sticky bordered">
+                    <div style="width:100%">
+                        <html>
+                        	<head>
+                        	<style>
+                        		
+                        	@media only screen and (max-width: 600px) {
+                        	  .eyrc_ckt{
+                        			display:none;
+                        		}
+                        	}
+                        
+                        	</style>
+                        	</head>
+                        	<body>
+                        		<div>
+                        		<center></center>
+                        			<div style="display:flex; justify-content:space-between;padding:10px;padding-top:0">
+                        				<div >
+                        					<img src="https://www.e-yantra.org/img/eYantra_logo.svg" alt="e-yantra_logo" height="40px" style="padding:10px 15px;" />
+                        				</div>
+                        				<div>
+                        					<img src="https://raw.githubusercontent.com/kalindkaria/typora-md-assets/master/maze_bot/assets/eyrc-header.svg" height="80px"  class="eyrc_ckt">
+                        				</div>
+                        				<div style="font-weight:900;font-size:20px;text-align:center;padding:10px 15px">
+                        					Robotics Competition<br>
+                        					2023-24
+                        				</div>
+                        			</div>
+                        			
+                        		</div>
+                        	</body>
+                        </html>
+                        
+                        
+                    </div>
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="space">Space</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">eYRC 2023-24: Cosmo Logistic</h1>
+
+                    <div class="right-buttons">
+                        <div id="navigation-buttons" type="button" onclick=" window.open('https://portal.e-yantra.org/profile_home', '_blank')">Home</div>
+                        <div id="navigation-buttons" type="button" onclick=" window.open('https://discuss.e-yantra.org/', '_blank')">Forum</div>
+                        <div id="navigation-buttons" type="button" onclick=" window.open('https://portal.e-yantra.org/logout', '_blank')">Logout</div>
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" name="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <!-- <center><img src="http://mooc.e-yantra.org/img/eYantra_logo.svg" alt="e-yantra_logo" style="scale:75%;" /></center> -->
+<style>
+.back{
+	position: fixed;
+	width: 250px;
+	height: 250px;
+	top: 50%;
+	left: 50%;
+    margin-top: auto; 
+    margin-left: auto; 
+	opacity: 0.15;
+    z-index: -1;
+	}
+</style>
+<!-- <img src="http://mooc.e-yantra.org/img/EyantraLogoMini.png" class="back"> -->
+<center>
+    <h1 id="welcome-to-task-4a"><a class="header" href="#welcome-to-task-4a">Welcome to Task 4A</a></h1>
+</center>
+<hr />
+</br>
+<h3 id="4a-ebot-navigation-and-docking"><a class="header" href="#4a-ebot-navigation-and-docking">4A <strong>eBot Navigation and Docking</strong></a></h3>
+<p>In this task team have to connect to the hardware and perform autonomous navigation using <em>nav2</em>. You can initially test the navigation using <em>RViz - Go to Goal Pose</em> feature to test robot accuracy and tune your navigation parameters in the initial slots and then automate go to goal pose using the script similar to one used in task 2b.</p>
+<ul>
+<li>
+<p><strong>Step 1:</strong> Connect to the remote hardware using <code>anydesk</code> (recommended) or <code>husarnet</code> (can be used for debugging) along with joining Google meet link given in the Slot Google Spreadsheet.</p>
+</li>
+<li>
+<p><strong>Step 2:</strong> Run your script to navigate the ebot from home position to pre-docking position (in front side of rack). Start your docking service to perform docking operations. While docking you can use <code>orientation</code> topic provided by eBot (which is only on hardware and can help wherever required. Details about topic msg/type are shared below).</p>
+</li>
+<li>
+<p><strong>Step 3:</strong> Once, the robot is closer to the rack you can turn on the magnet using a <code>usb_relay_sw</code> service (Magent on hardware is controlled using an USB relay attached on eBOT. More details are shared below). You are independent to use your logic for when to turn on the magnet (maybe before docking starts or once it reached closed to the rack).</p>
+</li>
+<li>
+<p><strong>Step 4:</strong> After the rack is attached, navigate towards the UR5 and prepare for undocking. This is to verify if the rack has attached the eBot correctly and the eBot is able to navigate using the rack. Once the rack/boxes are in reach of UR5, the ebot can demagnetise (turn OFF the electromagnet) and leave the rack. (This assures a successfull completion of task 4A)</p>
+</li>
+</ul>
+<h3 id="arena-setup-and-rules"><a class="header" href="#arena-setup-and-rules">Arena Setup and rules</a></h3>
+<ul>
+<li>
+<p>There will be two racks present in the arena having metal strips on each rack for the magnet to attach/detach the racks from eBot. The electromagnet for which to turn it on/off you can use a ros2 service <code>usb_relay_sw</code> defined by team e-Yantra (given below).</p>
+</li>
+<li>
+<p>The remote arena map will be created by team e-Yantra and this map will be placed inside the maps folder of existing package. Need not worry about this file location, it will be written in the launch file. (Although you cannot use this map in simulation as the world present in current gazebo and hardware arena setup are different.)</p>
+</li>
+<li>
+<p>The position of racks will be randomised for different tasks. And position of rack to be picked will be defined in a <code>config.yaml</code> (shared below) as used in previous tasks. You have to use this config file in your script to get the position and use it for navigation.</p>
+</li>
+</ul>
+<!-- - You will be provided with some sensors reading available with the eBot to get help in docking. (As you will find that `/odom` topic is not that much reliable as it was ideal in simulation. You will face drift issues, due to which with the help of ultrasonic and orientation/imu you can write your docking script) -->
+<ul>
+<li>
+<p>During this task in hardware, topics such as odom, cmd_vel, robot description and other related topics which are necessary will be advertised on eBot end. For this task there will be 3 packages present -</p>
+<ol>
+<li>eBot Nav2 - This package defines the map, mapper param, nav2 param, meshes, robot description (urdf) files together.</li>
+<li>eBot Control - This package contains python/c++ scripts writen by your team to perform task 4A. You are free to use this package to add/create any other scripts or messages/service if required.</li>
+<li>usb_realy - This package defines the service message for usb relay to turn the magent ON/OFF.</li>
+</ol>
+</li>
+<li>
+<p>The team have to use these packages and just tune the nav2 params as per their requirements and write a script (inside <code>ebot control</code> package) for task 4A accordingly.</p>
+</li>
+<li>
+<p>Each slot will be for 60 minutes each. And each team will get 4 slots each for eBot. So, stratergise and divide your work accordingly.</p>
+</li>
+<li>
+<p>Recommended targets for each slot - (Note: It is not compulsory to follow this)</p>
+<ul>
+<li>Slot 1: Move ebot from home position to pre-docking position (front side of a rack) defined in the config file (using python script)
+<ul>
+<li>Test Nav2/SLAM using RViz tools first and tune the navigation parameters and further continue testing with script using nav2 service.</li>
+</ul>
+</li>
+<li>Slot 2: Perform docking of ebot starting from home position (includes attachment of rack using the electromagnet)
+<ul>
+<li>Write docking script and perform docking operations such as aligning, ultrasonic linear docking, magnet testing, etc.</li>
+</ul>
+</li>
+<li>Slot 3: Move ebot with rack and drop the rack in front of the UR5
+<ul>
+<li>Use nav2 goals to navigate ebot with rack.</li>
+<li>Align the rack in front of UR5 and then turn OFF the electromagnet. The rack should be aligned in such as way that the boxes on rack are in the reach of UR5 arm. (Refer rulebook)</li>
+</ul>
+</li>
+<li>Slot 4: Full task 4A testing and submission
+<ul>
+<li>Perform all above mentioned subtasks starting from home position.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Make sure you have a backup internet connection along with your primary internet setup (prefereably keep two different SIM operator as backup, if you are using mobile hotspot)</strong></p>
+</li>
+</ul>
+<blockquote>
+<p><strong>NOTE:</strong> Once you start the task, no starting or stopping of any scripts are allowed during the run.</p>
+</blockquote>
+<h3 id="accessories"><a class="header" href="#accessories">Accessories</a></h3>
+<ul>
+<li>
+<p><strong>USB Relay</strong>
+To activate the service to control USB relay (Only for hardware)-
+<strong>Note:</strong></p>
+<ul>
+<li>
+<p><em><strong>relaychannel:</strong></em></p>
+<ul>
+<li>0 = Arduino Reset</li>
+<li>1 = Electromagnet</li>
+</ul>
+</li>
+<li>
+<p><em><strong>relaystate:</strong></em></p>
+<ul>
+<li>0 = Cuts of the connection</li>
+<li>1 = Turns on the connection</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p><em>Example: To turn the electromagnet ON</em></p>
+<pre><code>ros2 service call /usb_relay_sw usb_relay/srv/RelaySw &quot;{relaychannel: 1, relaystate: true}&quot;
+</code></pre>
+<p><em>Example: To turn the electromagnet OFF</em></p>
+<pre><code>ros2 service call /usb_relay_sw usb_relay/srv/RelaySw &quot;{relaychannel: 1, relaystate: false}&quot;
+</code></pre>
+</blockquote>
+<blockquote>
+<p><em>Example: To reset arduino, turn ON and OFF the switch with some delay. The USB relay switch is connected to reset button of arduino, so need to turn it ON for few second and then turn OFF.</em></p>
+<pre><code>ros2 service call /usb_relay_sw usb_relay/srv/RelaySw &quot;{relaychannel: 0, relaystate: true}&quot;
+# Provide delay for 1 second
+ros2 service call /usb_relay_sw usb_relay/srv/RelaySw &quot;{relaychannel: 0, relaystate: false}&quot;
+</code></pre>
+</blockquote>
+</li>
+<li>
+<p><strong>IMU Orientation</strong>
+To provide IMU data representation on eBot hardware, we have a topic named <code>/orientation</code> of type <code>Float32</code> which publishes <strong>Yaw</strong> of the eBot. </p>
+<ul>
+<li>The range of this orientation is from <code>0 - 6.28</code> <em>(in radians, i.e., 0 - 360 degrees)</em></li>
+<li>This topic can be used if any extra verification/logic needs to be applied</li>
+</ul>
+</li>
+<li>
+<p><strong>Ultrasonic</strong>
+There are different ultrasonic present on eBot. You can use the two ultrasonic sensors present on behind of the eBot (similar to one used in simulation tasks).</p>
+<ul>
+<li>Topic name for ultrasonic sensor is <code>/ultrasonic_sensor_std_float</code> of type <code>/Float32MultiArray</code> which has all ultrasonic data logged in an float multi array form.</li>
+<li>You can extract the two ultrasonic sensors present on 4th and 5th position in the array using the following code-
+<pre><code>ultra_sub = self.create_subscription(Float32MultiArray, 'ultrasonic_sensor_std_float', self.ultra_callback, 10)
+
+# callback for ultrasonic subscription
+def ultra_callback(self,msg):
+    self.ultra_left= msg.data[4]
+    self.ultra_right = msg.data[5]
+</code></pre>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Config file</strong></p>
+<ul>
+<li>
+<p>Navigate to the specified rack having the package mentioned in the configuration file as <code>package_id</code>. You can use the <code>yaml</code> python module to read the values.</p>
+</li>
+<li>
+<p>Download the file here - <a href="./config.yaml"  target="blank"><button type="button">config.yaml</button></a></p>
+</li>
+<li>
+<p>If the above link doesn't work, try to copy the content given below to a file named <code>config.yaml</code>, which should be created by you</p>
+</li>
+</ul>
+<pre><code class="language-yaml">position:
+    - rack1: [1.26, 4.34, 3.14]
+    - rack2: [2.03, 3.3, -1.57]
+    - rack3: [2.02, -8.09, 1.57]
+
+package_id: [3]
+</code></pre>
+<blockquote>
+<p><em><strong>Note: These coordinates might change during the hardware slots. So, verify once before you join the session</strong></em></p>
+</blockquote>
+</li>
+</ul>
+<h3 id="formula"><a class="header" href="#formula">Formula</a></h3>
+<blockquote>
+<p>Total_Marks = (10 * ECN) + (10 * ECP) + (10 * ECD) + (5 * B)</p>
+</blockquote>
+<p><strong>Note:</strong></p>
+<ul>
+<li><strong>ECN:</strong> [eBot Correct Navigation] Parameter increases when the eBot is within the desired perimeter of the rack. Repeated attempts to enter into the area of the same rack will not yield to any additional marks. (max value: 1 (binary))</li>
+<li><strong>ECP:</strong> [eBot Correct Pick] Parameter increases when the eBot has correctly docked and attached the rack with the eBot using electromagnet. If the eBot hits/collides with the rack during docking, then ECP will be considered as 0. (max value: 1 (binary))</li>
+<li><strong>ECD:</strong> [eBot Correct Drop] Parameter increases when the eBot has correctly dropped the rack in front of the UR5 arm and is in reach position of it. (max value: 1 (binary))</li>
+<li><strong>B:</strong> Bonus marks which will be awarded if a team is having maximum value ECL and ECD as 1. (max value: 1 (binary))</li>
+</ul>
+<p></p>
+</br>
+<hr />
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../../../Task_4/tasks/task4a/task4a.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next" href="../../../Task_4/tasks/task4a/submission.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../../../Task_4/tasks/task4a/task4a.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next" href="../../../Task_4/tasks/task4a/submission.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../../../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../../searcher.js" type="text/javascript" charset="utf-8"></script>
+
+        <script src="../../../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../../book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        <script type="text/javascript" src="../../../sidebar.js"></script>
+
+
+    </body>
+</html>
